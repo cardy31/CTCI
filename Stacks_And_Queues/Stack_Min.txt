@@ -1,0 +1,8 @@
+Question: How would you design a stack which, in addition to push and pop, has a function min which
+returns the minimum element? Push, pop, and min should all operation in O(1) time.
+
+
+Answer: Assume we start with an empty stack. The stack class will have a class attribute called smallest that is also a stack.
+When an element is pushed onto the stack, we check if the new element is smaller than the current min. If it is smaller,
+then it is pushed onto our smallest stack. If the current smallest element is popped from the stack,
+then the next element in our smallest stack becomes the current min.

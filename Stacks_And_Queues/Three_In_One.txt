@@ -1,0 +1,10 @@
+Question: Describe how you could use a single array to implement 3 stacks
+
+Answer: If 2D arrays are allowed then a single array could contain another array at its first 3 indices.
+
+If 2D arrays are not allowed, then you could use a sufficiently large array divided into 3 part,
+with each being it's own stack
+
+Finally, if 2D arrays are still not allowed, we could do flexible divisions in the array,
+moving around elements as needed based on how big the 3 stacks get.
+An error would be raised if the whole array was full.

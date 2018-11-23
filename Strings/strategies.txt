@@ -1,0 +1,4 @@
+Base Cases / easy returns
+Sorting
+Window
+Swapping
