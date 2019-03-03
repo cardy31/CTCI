@@ -2,26 +2,58 @@ from Trees.BinaryNode import BinaryNode
 
 
 def main():
-    root = BinaryNode(None, None, 20)
+    root = BinaryNode(None, None, 1)
 
     root.left = BinaryNode(None, None, 2)
 
-    root.right = BinaryNode(None, None, 6)
+    root.right = BinaryNode(None, None, 5)
 
-    root.right.left = BinaryNode(None, None, 5)
-    root.right.right = BinaryNode(None, None, 7)
+    # root.right.left = BinaryNode(None, None, 5)
+    root.right.right = BinaryNode(None, None, 6)
 
-    root.left.left = BinaryNode(None, None, 1)
-    root.left.right = BinaryNode(None, None, 3)
+    root.left.left = BinaryNode(None, None, 3)
+    root.left.right = BinaryNode(None, None, 4)
 
-    print('In order')
-    in_order_traversal(root)
+    # print('In order')
+    # in_order_traversal(root)
+
+    head = None
 
     print('Pre order')
-    pre_order_traversal(root)
+    in_order_traversal(root)
 
-    print('Post order')
-    post_order_traversal(root)
+    # print('Post order')
+    # post_order_traversal(root)
+
+    # print_linked_list(head)
+
+
+class LinkedListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+
+def add_to_list(head, val):
+    crawler = head
+
+    while crawler.next is not None:
+        crawler = crawler.next
+
+    crawler.next = LinkedListNode(val)
+
+
+# def print_linked_list(head):
+#     if head is None:
+#         return
+#
+#     crawler = head
+#
+#     while crawler.next is not None:
+#         print(crawler.val)
+#         crawler = crawler.next
+#
+#     print(crawler.val)
 
 
 def visit(node):

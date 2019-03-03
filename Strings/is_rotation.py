@@ -10,9 +10,9 @@ Time: O(n). Assuming the check for substring is O(n)
 '''
 def is_rotation(s1, s2):
     # Base cases
-    leng = len(s1)
+    length = len(s1)
 
-    if leng == len(s2) and leng > 0:
+    if length == len(s2) and length > 0:
         s1s1 = s1 + s1
         return s2 in s1s1
     return False
